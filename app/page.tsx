@@ -28,7 +28,7 @@ const ARROW_LABEL: Record<GuessItem["arrow"], string> = {
 const COUNTRY_ALIASES: Record<string, string> = {
   bolivia: "BO",
   brunei: "BN",
-  cape verde: "CV",
+  "cape verde": "CV",
   congo: "CG",
   "democratic republic of the congo": "CD",
   "ivory coast": "CI",
