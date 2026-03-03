@@ -1,0 +1,702 @@
+{
+  "source": "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_military_and_paramilitary_personnel",
+  "updatedAt": "2026-03-03T15:43:06.711Z",
+  "countries": [
+    {
+      "name": "Afghanistan",
+      "troops": 172000
+    },
+    {
+      "name": "Albania",
+      "troops": 7500
+    },
+    {
+      "name": "Algeria",
+      "troops": 139000
+    },
+    {
+      "name": "Angola",
+      "troops": 107000
+    },
+    {
+      "name": "Antigua and Barbuda",
+      "troops": 200
+    },
+    {
+      "name": "Argentina",
+      "troops": 83000
+    },
+    {
+      "name": "Armenia",
+      "troops": 42900
+    },
+    {
+      "name": "Australia",
+      "troops": 58540
+    },
+    {
+      "name": "Austria",
+      "troops": 22200
+    },
+    {
+      "name": "Azerbaijan",
+      "troops": 68200
+    },
+    {
+      "name": "Bahamas",
+      "troops": 1500
+    },
+    {
+      "name": "Bahrain",
+      "troops": 8200
+    },
+    {
+      "name": "Bangladesh",
+      "troops": 171250
+    },
+    {
+      "name": "Barbados",
+      "troops": 610
+    },
+    {
+      "name": "Belarus",
+      "troops": 48600
+    },
+    {
+      "name": "Belgium",
+      "troops": 23500
+    },
+    {
+      "name": "Belize",
+      "troops": 2000
+    },
+    {
+      "name": "Benin",
+      "troops": 12300
+    },
+    {
+      "name": "Bhutan",
+      "troops": 16000
+    },
+    {
+      "name": "Bolivia",
+      "troops": 34100
+    },
+    {
+      "name": "Bosnia and Herzegovina",
+      "troops": 10650
+    },
+    {
+      "name": "Botswana",
+      "troops": 9000
+    },
+    {
+      "name": "Brazil",
+      "troops": 374500
+    },
+    {
+      "name": "Brunei",
+      "troops": 7200
+    },
+    {
+      "name": "Bulgaria",
+      "troops": 36950
+    },
+    {
+      "name": "Burkina Faso",
+      "troops": 7000
+    },
+    {
+      "name": "Burundi",
+      "troops": 30050
+    },
+    {
+      "name": "Cambodia",
+      "troops": 124300
+    },
+    {
+      "name": "Cameroon",
+      "troops": 25400
+    },
+    {
+      "name": "Canada",
+      "troops": 62300
+    },
+    {
+      "name": "Cape Verde",
+      "troops": 1200
+    },
+    {
+      "name": "Central African Republic",
+      "troops": 9150
+    },
+    {
+      "name": "Chad",
+      "troops": 33250
+    },
+    {
+      "name": "Chile",
+      "troops": 68500
+    },
+    {
+      "name": "China",
+      "troops": 2035000
+    },
+    {
+      "name": "Colombia",
+      "troops": 269000
+    },
+    {
+      "name": "Comoros",
+      "troops": 1000
+    },
+    {
+      "name": "Côte d'Ivoire",
+      "troops": 27400
+    },
+    {
+      "name": "Croatia",
+      "troops": 16800
+    },
+    {
+      "name": "Cuba",
+      "troops": 49000
+    },
+    {
+      "name": "Cyprus",
+      "troops": 12000
+    },
+    {
+      "name": "Czech Republic",
+      "troops": 26600
+    },
+    {
+      "name": "Democratic Republic of the Congo",
+      "troops": 128350
+    },
+    {
+      "name": "Denmark",
+      "troops": 13100
+    },
+    {
+      "name": "Djibouti",
+      "troops": 8450
+    },
+    {
+      "name": "Dominican Republic",
+      "troops": 56800
+    },
+    {
+      "name": "Ecuador",
+      "troops": 39600
+    },
+    {
+      "name": "Egypt",
+      "troops": 438500
+    },
+    {
+      "name": "El Salvador",
+      "troops": 2600
+    },
+    {
+      "name": "Equatorial Guinea",
+      "troops": 1750
+    },
+    {
+      "name": "Eritrea",
+      "troops": 301750
+    },
+    {
+      "name": "Estonia",
+      "troops": 7100
+    },
+    {
+      "name": "Eswatini",
+      "troops": 3000
+    },
+    {
+      "name": "Ethiopia",
+      "troops": 503000
+    },
+    {
+      "name": "Fiji",
+      "troops": 4040
+    },
+    {
+      "name": "Finland",
+      "troops": 23850
+    },
+    {
+      "name": "France",
+      "troops": 202000
+    },
+    {
+      "name": "Gabon",
+      "troops": 4700
+    },
+    {
+      "name": "Gambia",
+      "troops": 4100
+    },
+    {
+      "name": "Georgia",
+      "troops": 20650
+    },
+    {
+      "name": "Germany",
+      "troops": 179850
+    },
+    {
+      "name": "Ghana",
+      "troops": 19000
+    },
+    {
+      "name": "Greece",
+      "troops": 132000
+    },
+    {
+      "name": "Guatemala",
+      "troops": 18050
+    },
+    {
+      "name": "Guinea",
+      "troops": 9700
+    },
+    {
+      "name": "Guinea-Bissau",
+      "troops": 4450
+    },
+    {
+      "name": "Guyana",
+      "troops": 3400
+    },
+    {
+      "name": "Haiti",
+      "troops": 700
+    },
+    {
+      "name": "Honduras",
+      "troops": 14950
+    },
+    {
+      "name": "Hungary",
+      "troops": 32150
+    },
+    {
+      "name": "India",
+      "troops": 1475750
+    },
+    {
+      "name": "Indonesia",
+      "troops": 404500
+    },
+    {
+      "name": "Iran",
+      "troops": 610000
+    },
+    {
+      "name": "Iraq",
+      "troops": 193000
+    },
+    {
+      "name": "Ireland",
+      "troops": 9500
+    },
+    {
+      "name": "Israel",
+      "troops": 169500
+    },
+    {
+      "name": "Italy",
+      "troops": 161850
+    },
+    {
+      "name": "Jamaica",
+      "troops": 5950
+    },
+    {
+      "name": "Japan",
+      "troops": 247150
+    },
+    {
+      "name": "Jordan",
+      "troops": 100500
+    },
+    {
+      "name": "Kazakhstan",
+      "troops": 39000
+    },
+    {
+      "name": "Kenya",
+      "troops": 24100
+    },
+    {
+      "name": "Kosovo",
+      "troops": 3000
+    },
+    {
+      "name": "Kuwait",
+      "troops": 17500
+    },
+    {
+      "name": "Kyrgyzstan",
+      "troops": 10900
+    },
+    {
+      "name": "Laos",
+      "troops": 29100
+    },
+    {
+      "name": "Latvia",
+      "troops": 6600
+    },
+    {
+      "name": "Lebanon",
+      "troops": 60000
+    },
+    {
+      "name": "Lesotho",
+      "troops": 2000
+    },
+    {
+      "name": "Liberia",
+      "troops": 2010
+    },
+    {
+      "name": "Lithuania",
+      "troops": 16100
+    },
+    {
+      "name": "Luxembourg",
+      "troops": 1100
+    },
+    {
+      "name": "Madagascar",
+      "troops": 13500
+    },
+    {
+      "name": "Malawi",
+      "troops": 10700
+    },
+    {
+      "name": "Malaysia",
+      "troops": 113000
+    },
+    {
+      "name": "Maldives",
+      "troops": 4000
+    },
+    {
+      "name": "Mali",
+      "troops": 21000
+    },
+    {
+      "name": "Malta",
+      "troops": 1700
+    },
+    {
+      "name": "Mauritania",
+      "troops": 15850
+    },
+    {
+      "name": "Mexico",
+      "troops": 287000
+    },
+    {
+      "name": "Moldova",
+      "troops": 5150
+    },
+    {
+      "name": "Monaco",
+      "troops": 250
+    },
+    {
+      "name": "Mongolia",
+      "troops": 9700
+    },
+    {
+      "name": "Montenegro",
+      "troops": 2885
+    },
+    {
+      "name": "Morocco",
+      "troops": 195800
+    },
+    {
+      "name": "Mozambique",
+      "troops": 11200
+    },
+    {
+      "name": "Myanmar",
+      "troops": 134000
+    },
+    {
+      "name": "Namibia",
+      "troops": 11600
+    },
+    {
+      "name": "Nepal",
+      "troops": 96600
+    },
+    {
+      "name": "Netherlands",
+      "troops": 33650
+    },
+    {
+      "name": "New Zealand",
+      "troops": 8700
+    },
+    {
+      "name": "Nicaragua",
+      "troops": 12000
+    },
+    {
+      "name": "Niger",
+      "troops": 39100
+    },
+    {
+      "name": "Nigeria",
+      "troops": 143000
+    },
+    {
+      "name": "North Korea",
+      "troops": 1280000
+    },
+    {
+      "name": "North Macedonia",
+      "troops": 8000
+    },
+    {
+      "name": "Norway",
+      "troops": 25400
+    },
+    {
+      "name": "Oman",
+      "troops": 42600
+    },
+    {
+      "name": "Pakistan",
+      "troops": 660000
+    },
+    {
+      "name": "Papua New Guinea",
+      "troops": 4000
+    },
+    {
+      "name": "Paraguay",
+      "troops": 13950
+    },
+    {
+      "name": "Peru",
+      "troops": 81000
+    },
+    {
+      "name": "Philippines",
+      "troops": 146250
+    },
+    {
+      "name": "Poland",
+      "troops": 164100
+    },
+    {
+      "name": "Portugal",
+      "troops": 26050
+    },
+    {
+      "name": "Qatar",
+      "troops": 16500
+    },
+    {
+      "name": "Republic of the Congo",
+      "troops": 10000
+    },
+    {
+      "name": "Romania",
+      "troops": 69900
+    },
+    {
+      "name": "Russia",
+      "troops": 1134000
+    },
+    {
+      "name": "Rwanda",
+      "troops": 33000
+    },
+    {
+      "name": "Saint Kitts and Nevis",
+      "troops": 300
+    },
+    {
+      "name": "San Marino",
+      "troops": 445
+    },
+    {
+      "name": "São Tomé and Príncipe",
+      "troops": 300
+    },
+    {
+      "name": "Saudi Arabia",
+      "troops": 257000
+    },
+    {
+      "name": "Senegal",
+      "troops": 13600
+    },
+    {
+      "name": "Serbia",
+      "troops": 28150
+    },
+    {
+      "name": "Seychelles",
+      "troops": 420
+    },
+    {
+      "name": "Sierra Leone",
+      "troops": 8500
+    },
+    {
+      "name": "Singapore",
+      "troops": 51000
+    },
+    {
+      "name": "Slovakia",
+      "troops": 15850
+    },
+    {
+      "name": "Slovenia",
+      "troops": 6200
+    },
+    {
+      "name": "Somalia",
+      "troops": 25000
+    },
+    {
+      "name": "South Africa",
+      "troops": 69200
+    },
+    {
+      "name": "South Korea",
+      "troops": 500000
+    },
+    {
+      "name": "South Sudan",
+      "troops": 90000
+    },
+    {
+      "name": "Spain",
+      "troops": 122200
+    },
+    {
+      "name": "Sri Lanka",
+      "troops": 262500
+    },
+    {
+      "name": "Sudan",
+      "troops": 104300
+    },
+    {
+      "name": "Suriname",
+      "troops": 1840
+    },
+    {
+      "name": "Sweden",
+      "troops": 14850
+    },
+    {
+      "name": "Switzerland",
+      "troops": 21300
+    },
+    {
+      "name": "Taiwan",
+      "troops": 169000
+    },
+    {
+      "name": "Tajikistan",
+      "troops": 8800
+    },
+    {
+      "name": "Tanzania",
+      "troops": 27000
+    },
+    {
+      "name": "Thailand",
+      "troops": 360850
+    },
+    {
+      "name": "Timor-Leste",
+      "troops": 2250
+    },
+    {
+      "name": "Togo",
+      "troops": 13750
+    },
+    {
+      "name": "Tonga",
+      "troops": 750
+    },
+    {
+      "name": "Trinidad and Tobago",
+      "troops": 4050
+    },
+    {
+      "name": "Tunisia",
+      "troops": 35800
+    },
+    {
+      "name": "Turkey",
+      "troops": 355200
+    },
+    {
+      "name": "Turkmenistan",
+      "troops": 36500
+    },
+    {
+      "name": "Uganda",
+      "troops": 45000
+    },
+    {
+      "name": "Ukraine",
+      "troops": 730000
+    },
+    {
+      "name": "United Arab Emirates",
+      "troops": 63000
+    },
+    {
+      "name": "United Kingdom",
+      "troops": 141100
+    },
+    {
+      "name": "United States",
+      "troops": 1315600
+    },
+    {
+      "name": "Uruguay",
+      "troops": 21100
+    },
+    {
+      "name": "Uzbekistan",
+      "troops": 48000
+    },
+    {
+      "name": "Venezuela",
+      "troops": 123000
+    },
+    {
+      "name": "Vietnam",
+      "troops": 450000
+    },
+    {
+      "name": "Yemen",
+      "troops": 40000
+    },
+    {
+      "name": "Zambia",
+      "troops": 17100
+    },
+    {
+      "name": "Zimbabwe",
+      "troops": 29000
+    }
+  ]
+}
