@@ -25,6 +25,86 @@ const ARROW_LABEL: Record<GuessItem["arrow"], string> = {
   none: "OK"
 };
 
+const COUNTRY_ALIASES: Record<string, string> = {
+  bolivia: "BO",
+  brunei: "BN",
+  cape verde: "CV",
+  congo: "CG",
+  "democratic republic of the congo": "CD",
+  "ivory coast": "CI",
+  laos: "LA",
+  moldova: "MD",
+  palestine: "PS",
+  russia: "RU",
+  south korea: "KR",
+  north korea: "KP",
+  syria: "SY",
+  taiwan: "TW",
+  tanzania: "TZ",
+  turkey: "TR",
+  venezuela: "VE",
+  vietnam: "VN"
+};
+
+function normalizeCountryName(name: string): string {
+  return name
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9\s]/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function codeToFlagEmoji(code: string): string {
+  if (!/^[A-Z]{2}$/.test(code)) {
+    return "🏳️";
+  }
+
+  const [first, second] = code;
+  const base = 127397;
+  return String.fromCodePoint(base + first.charCodeAt(0), base + second.charCodeAt(0));
+}
+
+function getCountryCodeFromName(name: string): string | null {
+  const normalized = normalizeCountryName(name);
+  if (!normalized) {
+    return null;
+  }
+
+  const alias = COUNTRY_ALIASES[normalized];
+  if (alias) {
+    return alias;
+  }
+
+  const intlWithRegions = Intl as typeof Intl & {
+    supportedValuesOf?: (key: "region") => string[];
+  };
+
+  if (typeof intlWithRegions.supportedValuesOf !== "function") {
+    return null;
+  }
+
+  const displayNames = new Intl.DisplayNames(["en"], { type: "region" });
+  for (const regionCode of intlWithRegions.supportedValuesOf("region")) {
+    const regionName = displayNames.of(regionCode);
+    if (regionName && normalizeCountryName(regionName) === normalized) {
+      return regionCode;
+    }
+  }
+
+  return null;
+}
+
+function getFlagForCountry(name: string): string {
+  const code = getCountryCodeFromName(name);
+  if (!code) {
+    return "🏳️";
+  }
+
+  return codeToFlagEmoji(code);
+}
+
 function storageKey(date: string): string {
   return `troople:${date}`;
 }
@@ -161,6 +241,16 @@ export default function HomePage() {
 
         {!loading && today && (
           <>
+            <section className="howToPlay" aria-label="How to play">
+              <h2>How to play</h2>
+              <p>Guess the country in 6 tries.</p>
+              <p>Daily hint: the target country has exactly {today.hintTroops.toLocaleString()} standing troops.</p>
+              <p>After each wrong guess, you see that country&apos;s troop count and:</p>
+              <p>
+                <strong>↑</strong> means target is higher, <strong>↓</strong> means target is lower.
+              </p>
+            </section>
+
             <div className="meta" aria-live="polite">
               <span>Date (GMT): {today.date}</span>
               <span>Target troops: {today.hintTroops.toLocaleString()}</span>
@@ -221,7 +311,10 @@ export default function HomePage() {
               {guesses.map((result, index) => (
                 <li className="result" key={`${result.guess}-${index}`}>
                   <span>
-                    <strong>{result.guess}</strong> - {result.guessedTroops.toLocaleString()} troops
+                    <strong>
+                      {getFlagForCountry(result.guess)} {result.guess}
+                    </strong>{" "}
+                    - {result.guessedTroops.toLocaleString()} troops
                   </span>
                   <span className={`badge ${result.correct ? "correct" : "incorrect"}`}>
                     {ARROW_LABEL[result.arrow]}
