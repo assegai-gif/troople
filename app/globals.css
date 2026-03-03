@@ -65,13 +65,54 @@ h1 {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 0.6rem;
+  align-items: start;
 }
 
 input[type="text"] {
+  width: 100%;
   border: 1px solid var(--line);
   border-radius: 10px;
   padding: 0.75rem 0.9rem;
   font-size: 1rem;
+}
+
+.autocomplete {
+  position: relative;
+}
+
+.autocompleteMenu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 0.35rem;
+  max-height: 220px;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 10px 24px rgba(24, 33, 47, 0.16);
+  z-index: 20;
+}
+
+.autocompleteItem {
+  display: block;
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--ink);
+  text-align: left;
+  padding: 0.55rem 0.6rem;
+  font-size: 0.95rem;
+}
+
+.autocompleteItem:hover,
+.autocompleteItem:focus-visible {
+  background: #eef3ff;
+  color: #0d2e61;
+  outline: none;
 }
 
 button {

@@ -11,6 +11,7 @@ export async function GET() {
     gameName: "Troople",
     date,
     maxGuesses: MAX_GUESSES,
+    hintTroops: answer.troops,
     updatedAt: data.updatedAt,
     source: data.source,
     puzzleKey: `${date}:${answer.name.length}`,

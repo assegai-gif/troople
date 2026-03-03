@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useRef, useState } from "react";
 
 type GuessItem = {
   guess: string;
@@ -13,6 +13,7 @@ type TodayResponse = {
   gameName: string;
   date: string;
   maxGuesses: number;
+  hintTroops: number;
   updatedAt: string;
   source: string;
   countries: string[];
@@ -32,9 +33,11 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true);
   const [today, setToday] = useState<TodayResponse | null>(null);
   const [guessInput, setGuessInput] = useState("");
+  const [showDropdown, setShowDropdown] = useState(false);
   const [guesses, setGuesses] = useState<GuessItem[]>([]);
   const [answer, setAnswer] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const inputWrapRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     let mounted = true;
@@ -87,6 +90,31 @@ export default function HomePage() {
   }, [today, guesses, answer]);
 
   const countryOptions = useMemo(() => today?.countries ?? [], [today]);
+  const filteredOptions = useMemo(() => {
+    const query = guessInput.trim().toLowerCase();
+    if (!query) {
+      return countryOptions.slice(0, 10);
+    }
+
+    return countryOptions.filter((country) => country.toLowerCase().includes(query)).slice(0, 10);
+  }, [countryOptions, guessInput]);
+
+  useEffect(() => {
+    function handleOutsideClick(event: MouseEvent) {
+      if (!inputWrapRef.current) {
+        return;
+      }
+
+      if (!inputWrapRef.current.contains(event.target as Node)) {
+        setShowDropdown(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
 
   async function submitGuess(event: FormEvent) {
     event.preventDefault();
@@ -113,6 +141,7 @@ export default function HomePage() {
       const nextGuesses = [...guesses, payload as GuessItem];
       setGuesses(nextGuesses);
       setGuessInput("");
+      setShowDropdown(false);
 
       if (payload.revealAnswer) {
         setAnswer(payload.revealAnswer as string);
@@ -134,6 +163,7 @@ export default function HomePage() {
           <>
             <div className="meta" aria-live="polite">
               <span>Date (GMT): {today.date}</span>
+              <span>Target troops: {today.hintTroops.toLocaleString()}</span>
               <span>Guesses left: {Math.max(0, maxGuesses - usedGuesses)}</span>
             </div>
 
@@ -141,23 +171,43 @@ export default function HomePage() {
               <label htmlFor="guess-input" className="sr-only">
                 Country guess
               </label>
-              <input
-                id="guess-input"
-                name="guess"
-                type="text"
-                autoComplete="off"
-                list="country-options"
-                value={guessInput}
-                onChange={(event) => setGuessInput(event.target.value)}
-                placeholder="Type a country"
-                disabled={gameOver}
-                aria-describedby="hint-text"
-              />
-              <datalist id="country-options">
-                {countryOptions.map((country) => (
-                  <option key={country} value={country} />
-                ))}
-              </datalist>
+              <div className="autocomplete" ref={inputWrapRef}>
+                <input
+                  id="guess-input"
+                  name="guess"
+                  type="text"
+                  autoComplete="off"
+                  value={guessInput}
+                  onFocus={() => setShowDropdown(true)}
+                  onChange={(event) => {
+                    setGuessInput(event.target.value);
+                    setShowDropdown(true);
+                  }}
+                  placeholder="Type a country"
+                  disabled={gameOver}
+                  aria-describedby="hint-text"
+                  aria-expanded={showDropdown && filteredOptions.length > 0}
+                  aria-controls="country-options"
+                />
+                {showDropdown && filteredOptions.length > 0 && !gameOver && (
+                  <ul id="country-options" className="autocompleteMenu" role="listbox">
+                    {filteredOptions.map((country) => (
+                      <li key={country}>
+                        <button
+                          type="button"
+                          className="autocompleteItem"
+                          onClick={() => {
+                            setGuessInput(country);
+                            setShowDropdown(false);
+                          }}
+                        >
+                          {country}
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
               <button type="submit" disabled={gameOver}>
                 Guess
               </button>
