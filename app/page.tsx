@@ -66,6 +66,37 @@ function codeToFlagEmoji(code: string): string {
   return String.fromCodePoint(base + first.charCodeAt(0), base + second.charCodeAt(0));
 }
 
+const REGION_NAME_TO_CODE: ReadonlyMap<string, string> = (() => {
+  const map = new Map<string, string>();
+
+  try {
+    const intlWithRegions = Intl as typeof Intl & {
+      supportedValuesOf?: (key: "region") => string[];
+      DisplayNames?: typeof Intl.DisplayNames;
+    };
+
+    if (typeof intlWithRegions.supportedValuesOf !== "function") {
+      return map;
+    }
+
+    if (typeof intlWithRegions.DisplayNames !== "function") {
+      return map;
+    }
+
+    const displayNames = new intlWithRegions.DisplayNames(["en"], { type: "region" });
+    for (const regionCode of intlWithRegions.supportedValuesOf("region")) {
+      const regionName = displayNames.of(regionCode);
+      if (regionName) {
+        map.set(normalizeCountryName(regionName), regionCode);
+      }
+    }
+  } catch {
+    return map;
+  }
+
+  return map;
+})();
+
 function getCountryCodeFromName(name: string): string | null {
   const normalized = normalizeCountryName(name);
   if (!normalized) {
@@ -76,24 +107,7 @@ function getCountryCodeFromName(name: string): string | null {
   if (alias) {
     return alias;
   }
-
-  const intlWithRegions = Intl as typeof Intl & {
-    supportedValuesOf?: (key: "region") => string[];
-  };
-
-  if (typeof intlWithRegions.supportedValuesOf !== "function") {
-    return null;
-  }
-
-  const displayNames = new Intl.DisplayNames(["en"], { type: "region" });
-  for (const regionCode of intlWithRegions.supportedValuesOf("region")) {
-    const regionName = displayNames.of(regionCode);
-    if (regionName && normalizeCountryName(regionName) === normalized) {
-      return regionCode;
-    }
-  }
-
-  return null;
+  return REGION_NAME_TO_CODE.get(normalized) ?? null;
 }
 
 function getFlagForCountry(name: string): string {
