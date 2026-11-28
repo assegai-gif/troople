@@ -1,6 +1,6 @@
 {
   "source": "https://en.wikipedia.org/wiki/List_of_countries_by_number_of_military_and_paramilitary_personnel",
-  "updatedAt": "2026-11-27T08:15:42.206Z",
+  "updatedAt": "2026-11-28T07:38:22.594Z",
   "countries": [
     {
       "name": "Afghanistan",
@@ -24,7 +24,7 @@
     },
     {
       "name": "Argentina",
-      "troops": 83000
+      "troops": 72100
     },
     {
       "name": "Armenia",
@@ -68,15 +68,11 @@
     },
     {
       "name": "Belize",
-      "troops": 2000
+      "troops": 1500
     },
     {
       "name": "Benin",
       "troops": 12300
-    },
-    {
-      "name": "Bhutan",
-      "troops": 16000
     },
     {
       "name": "Bolivia",
@@ -144,11 +140,7 @@
     },
     {
       "name": "Colombia",
-      "troops": 285000
-    },
-    {
-      "name": "Comoros",
-      "troops": 1000
+      "troops": 269000
     },
     {
       "name": "Côte d'Ivoire",
@@ -211,10 +203,6 @@
       "troops": 7100
     },
     {
-      "name": "Eswatini",
-      "troops": 3000
-    },
-    {
       "name": "Ethiopia",
       "troops": 503000
     },
@@ -228,7 +216,7 @@
     },
     {
       "name": "France",
-      "troops": 203900
+      "troops": 202000
     },
     {
       "name": "Gabon",
@@ -252,7 +240,7 @@
     },
     {
       "name": "Greece",
-      "troops": 131650
+      "troops": 132000
     },
     {
       "name": "Guatemala",
@@ -284,11 +272,11 @@
     },
     {
       "name": "India",
-      "troops": 1500700
+      "troops": 1475750
     },
     {
       "name": "Indonesia",
-      "troops": 433700
+      "troops": 404500
     },
     {
       "name": "Iran",
@@ -308,7 +296,7 @@
     },
     {
       "name": "Italy",
-      "troops": 160400
+      "troops": 161850
     },
     {
       "name": "Jamaica",
@@ -368,7 +356,7 @@
     },
     {
       "name": "Luxembourg",
-      "troops": 1100
+      "troops": 900
     },
     {
       "name": "Madagascar",
@@ -400,15 +388,11 @@
     },
     {
       "name": "Mexico",
-      "troops": 301000
+      "troops": 287000
     },
     {
       "name": "Moldova",
       "troops": 5150
-    },
-    {
-      "name": "Monaco",
-      "troops": 250
     },
     {
       "name": "Mongolia",
@@ -492,11 +476,11 @@
     },
     {
       "name": "Philippines",
-      "troops": 162450
+      "troops": 146250
     },
     {
       "name": "Poland",
-      "troops": 173000
+      "troops": 164100
     },
     {
       "name": "Portugal",
@@ -516,23 +500,11 @@
     },
     {
       "name": "Russia",
-      "troops": 1264000
+      "troops": 1134000
     },
     {
       "name": "Rwanda",
       "troops": 33000
-    },
-    {
-      "name": "Saint Kitts and Nevis",
-      "troops": 300
-    },
-    {
-      "name": "San Marino",
-      "troops": 445
-    },
-    {
-      "name": "São Tomé and Príncipe",
-      "troops": 300
     },
     {
       "name": "Saudi Arabia",
@@ -568,7 +540,7 @@
     },
     {
       "name": "Somalia",
-      "troops": 25000
+      "troops": 13900
     },
     {
       "name": "South Africa",
@@ -576,7 +548,7 @@
     },
     {
       "name": "South Korea",
-      "troops": 450000
+      "troops": 500000
     },
     {
       "name": "South Sudan",
@@ -588,7 +560,7 @@
     },
     {
       "name": "Sri Lanka",
-      "troops": 260450
+      "troops": 262500
     },
     {
       "name": "Sudan",
@@ -608,7 +580,7 @@
     },
     {
       "name": "Taiwan",
-      "troops": 170600
+      "troops": 169000
     },
     {
       "name": "Tajikistan",
@@ -629,10 +601,6 @@
     {
       "name": "Togo",
       "troops": 13750
-    },
-    {
-      "name": "Tonga",
-      "troops": 750
     },
     {
       "name": "Trinidad and Tobago",
@@ -656,7 +624,7 @@
     },
     {
       "name": "Ukraine",
-      "troops": 677000
+      "troops": 730000
     },
     {
       "name": "United Arab Emirates",
@@ -668,7 +636,7 @@
     },
     {
       "name": "United States",
-      "troops": 1340150
+      "troops": 1315600
     },
     {
       "name": "Uruguay",
